@@ -365,3 +365,55 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+
+/* about */
+#aboutDetail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+}
+
+#aboutDetail > div {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+
+/* skills */
+.skills-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: gray;
+}
+
+#skillsDetail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+}
+
+#skillsDetail > div {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+#skillsDetail img {
+    height: 70px;
+}

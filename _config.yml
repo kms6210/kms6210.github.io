@@ -1,8 +1,11 @@
 # Site settings
-title: Grayscale
-email: your-email@domain.com
-url: https://example.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: KMS Portfolio
+email: kms2786210@naver.com
+url: https://kms6210.github.io/
+description: "Thank you for visiting my portfolio! 👋 <br>
+🌱 I’m currently learning Computer Science and Engineering at Seoul National University. <br>
+📚 I’m majoring in Civil and Environment Engineering at SNU, and will graduate soon. <br>
+💬 How to reach me: kms2786210@naver.com"
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
