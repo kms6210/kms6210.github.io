@@ -472,5 +472,11 @@ canvas {
 
 #readMe > a {
     width: 17%;
-    overflow: hidden;
+    overflow: scroll;
+}
+
+
+/* common */
+*::-webkit-scrollbar {
+    display: none;
 }
