@@ -166,11 +166,11 @@ a:focus {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 80px;
     }
 
     .intro .intro-body .intro-text {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
@@ -423,3 +423,45 @@ body {
     width: 60px;
     margin: 5px;
 }
+
+
+/* projects */
+.project-section {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #11505d;
+}
+
+
+#projectsDetail {
+    width: 80%;
+    margin-left: 10%;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+#projectsDetail > h6 {
+    margin-top: -20px;
+    color: gray;
+}
+
+canvas {
+    width: 100%;
+}
+
+#projectsDetail button {
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#readMe {
+    display: flex;
+    justify-content: end;
+    margin-top: -35px;
+}
+

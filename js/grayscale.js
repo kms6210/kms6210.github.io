@@ -182,3 +182,102 @@ function init() {
         icon: image
     });
 }
+
+
+// projects
+var pdfPaths = ['/pdf/honeyPot.pdf', '/pdf/khUniv.pdf']; // PDF 파일 경로 배열
+
+// 현재 페이지
+var currentPages = [1, 1];
+
+// PDF를 표시할 컨테이너 요소들 가져오기
+var containers = [
+  document.getElementById('pdf-container-1'),
+  document.getElementById('pdf-container-2')
+];
+
+// 이전 버튼과 다음 버튼 요소들 가져오기
+var prevButtons = [
+  document.getElementById('prev-button-1'),
+  document.getElementById('prev-button-2')
+];
+var nextButtons = [
+  document.getElementById('next-button-1'),
+  document.getElementById('next-button-2')
+];
+
+// 페이지 정보 요소들 가져오기
+var pageInfoElements = [
+  document.getElementById('page-info-1'),
+  document.getElementById('page-info-2')
+];
+
+// PDF 로드 및 초기화 실행
+for (var i = 0; i < pdfPaths.length; i++) {
+  initializePdf(i, pdfPaths[i], currentPages[i]);
+}
+
+/**
+ * PDF 초기화 및 로드 함수
+ */
+function initializePdf(index, url, currentPage) {
+  pdfjsLib.getDocument(url).promise.then(function(pdfDoc) {
+
+    // 이전 버튼 클릭 시 이벤트 처리
+    prevButtons[index].addEventListener('click', function() {
+      goToPreviousPage(index, pdfDoc, currentPage);
+    });
+
+    // 다음 버튼 클릭 시 이벤트 처리
+    nextButtons[index].addEventListener('click', function() {
+      goToNextPage(index, pdfDoc, currentPage);
+    });
+
+    // 초기 페이지 렌더링
+    renderPage(index, pdfDoc, currentPage);
+  });
+}
+
+/**
+ * 특정 페이지의 PDF를 렌더링하여 화면에 표시하는 함수
+ */
+function renderPage(index, pdfDoc, pageNumber) {
+  pdfDoc.getPage(pageNumber).then(function(page) {
+    var viewport = page.getViewport({ scale: 1.0 });
+    var canvas = document.createElement('canvas');
+    canvas.style.display = 'block';
+    containers[index].innerHTML = '';
+    containers[index].appendChild(canvas);
+
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    page.render({
+      canvasContext: canvas.getContext('2d'),
+      viewport: viewport,
+    });
+
+    // 페이지 정보 업데이트
+    pageInfoElements[index].textContent = pageNumber + '/' + pdfDoc.numPages;
+  });
+}
+
+/**
+ * 이전 페이지로 이동하는 함수
+ */
+function goToPreviousPage(index, pdfDoc) {
+  if (currentPages[index] <= 1) return;
+
+  currentPages[index]--;
+  renderPage(index, pdfDoc, currentPages[index]);
+}
+
+/**
+ * 다음 페이지로 이동하는 함수
+ */
+function goToNextPage(index, pdfDoc) {
+  if (currentPages[index] >= pdfDoc.numPages) return;
+
+  currentPages[index]++;
+  renderPage(index, pdfDoc, currentPages[index]);
+}

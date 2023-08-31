@@ -1,13 +1,20 @@
-Grayscale Jekyll theme
-=========================
+### Thank you for visiting my profile! 👋
 
-Jekyll theme based on [Grayscale bootstrap theme ](http://ironsummitmedia.github.io/startbootstrap-grayscale/)
+- 🌱 I’m currently learning Computer Science and Engineering at Seoul National University.
+- 📚 I’m majoring in Civil and Environment Engineering at SNU, and will graduate soon.
+- 💬 How to reach me: kms2786210@naver.com
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/grayscale-theme)
+<!--
+**kms6210/kms6210** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-## Screenshot
-![screenshot](https://raw.githubusercontent.com/jeromelachaud/grayscale-theme/master/screenshot.png)
+Here are some ideas to get you started:
 
-=========
-For more details, read the [documentation](http://jekyllrb.com/)
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
