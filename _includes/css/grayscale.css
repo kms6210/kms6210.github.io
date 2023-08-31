@@ -367,23 +367,25 @@ body {
 }
 
 
+
 /* aboutMe */
 #aboutDetail {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 31%);
     grid-template-rows: repeat(2, 100px);
-    grid-row-gap: 20px;
-    grid-column-gap: 30px;
+    grid-row-gap: 15%;
+    grid-column-gap: 3%;
 }
 
 #aboutDetail > div {
     background-color: white;
     color: black;
     border-radius: 30px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
     font-size: 16px;
 }
 
@@ -397,10 +399,10 @@ body {
 
 #skillsDetail {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 30px;
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: repeat(2, 300px);
+    grid-row-gap: 5%;
+    grid-column-gap: 3%;
 }
 
 #skillsDetail > div {
@@ -410,8 +412,11 @@ body {
     background-color: white;
     color: black;
     border-radius: 30px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-    padding: 25px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 24px;
 }
 
@@ -420,7 +425,7 @@ body {
 }
 
 #skillsDetail img {
-    width: 60px;
+    width: 25%;
     margin: 5px;
 }
 
@@ -462,6 +467,10 @@ canvas {
 #readMe {
     display: flex;
     justify-content: end;
-    margin-top: -35px;
+    margin-top: -30px;
 }
 
+#readMe > a {
+    width: 17%;
+    overflow: hidden;
+}
